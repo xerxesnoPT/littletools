@@ -21,8 +21,10 @@ def parsehtml(city):
     if source_html:
         selector = etree.HTML(source_html)
         xpath = '//div[@class="forecast clearfix"]//ul'
+        location_city = selector.xpath('//div[@class="search_default"]/em/text()')
         ul_elements = selector.xpath(xpath)
         if ul_elements:
+            weather_list.append(location_city)
             for ul in ul_elements[1:]:
                 # 获取节点下所有的text的迭代器
                 # 在python3中直接可以使用filter，map 传入迭代器
@@ -46,6 +48,7 @@ def main():
         if result:
             for weather in result:
                 print('  '.join(weather))
+                print()
             print('have a nice day')
         else:
             print('not found this city', '\n')

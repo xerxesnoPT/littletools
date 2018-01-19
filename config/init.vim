@@ -6,16 +6,24 @@ let g:spacevim_buffer_index_type = 4
 let g:spacevim_enable_tabline_filetype_icon = 0
 let g:spacevim_enable_statusline_display_mode = 0
 let g:spacevim_colorscheme = 'one'
+
 let g:spacevim_colorscheme_bg = 'dark'
 
-set timeoutlen=500
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$' 
+
+set timeoutlen=200
 set foldmethod=indent
 
 let g:spacevim_statusline_separator = 'arrow'
 
 let g:spacevim_guifont = 'DejaVu\ Sans\ Mono\ for\ Powerline\ 11'
 
+let g:spacevim_relativenumber = 0
+
 call SpaceVim#layers#load("lang#python")
+call SpaceVim#layers#load("incsearch")
+call SpaceVim#layers#load("shell")
+call SpaceVim#layers#load("chinese")
 call SpaceVim#layers#load("lang#xml")
 call SpaceVim#layers#load("lang#html")
 call SpaceVim#layers#load("lang#c")

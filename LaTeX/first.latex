@@ -1,0 +1,15 @@
+\documentclass[a4paper,11pt]{article}
+% define the title 
+\author{xers}
+\title{Minimalism}
+\begin{document}
+% generates the title
+\maketitle
+% insert the table of contents
+\tableofcontents
+\section{Some Interesting Words}
+Well, and here begins my lovely article.
+\section{Good Bye}
+\ldots{} and here it ends.
+\end{document}
+
